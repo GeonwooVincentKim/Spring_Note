@@ -1,0 +1,8 @@
+1. SELECT QUERY 안에 굳이 COLUMN 명이 안들어가도 됨
+2. XML 안에 들어가는 #{} 기호 안에 들어가는 column 이름에 맞춰 Repo 에는 @Param("") Type variableName, Controller 에는 @RequestParam("") Type variablewName 로 작성해주면 된다.
+
+<HashMap>
+1. Repo 에서는 List 로 받아오기
+2. Controller 에서는 HashMap<String, Object> 로 받아오기
+3. Service 에서 HashMap<String, Object> 로 받아 온 후, 내부적으로 `HashMap<String, Object> variable`, 그리고 `List<ModelName>` 형태로 받아 온 후, List 를 차례대로 순회시켜
+   한 차례씩 순회시킬 때마다 내부적으로 선언한 `HashMap<String, Object> variable` 에 값을 넣는다.
